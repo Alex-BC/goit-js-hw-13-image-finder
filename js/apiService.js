@@ -1,5 +1,5 @@
 const BASE_URL = 'https://pixabay.com/api/';
-const API_KEY = '19028300-83b376d79bd6a99c9e2183deb';
+const API_KEY = '19201386-219bb908558d098454af3ef41';
 
 export default class PixabayApiService {
   constructor() {
