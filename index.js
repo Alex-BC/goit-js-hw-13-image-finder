@@ -42,6 +42,7 @@ function onSearch(event) {
   clearGalleryContainer();
   fetchPictures();
   loadMoreBtn.show();
+  resetPage();
 }
 
 async function fetchPictures() {
@@ -51,7 +52,7 @@ async function fetchPictures() {
   try {
     const response = await pixabayApiService.fetchPictures();
 
-    if (response.length === 0) {
+    if (response.length < 12) {
       loadMoreBtn.hide();
       return error({
         title: 'Oh, no!',
