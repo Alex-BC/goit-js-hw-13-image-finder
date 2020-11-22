@@ -54,9 +54,10 @@ async function fetchPictures() {
 
     if (response.length < 12) {
       loadMoreBtn.hide();
+      appendPicturesMarkup(response);
       return error({
-        title: 'Oh, no!',
-        text: 'No results, please specify your query',
+        title: 'Sorry',
+        text: 'Not enough images',
         animation: 'fade',
         hide: true,
         delay: 2000,
