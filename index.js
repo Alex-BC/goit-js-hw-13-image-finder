@@ -25,7 +25,7 @@ refs.galleryContainer.addEventListener('click', openModal);
 
 function onSearch(event) {
   event.preventDefault();
-
+  pixabayApiService.resetPage();
   pixabayApiService.query = event.currentTarget.elements.query.value;
 
   if (pixabayApiService.query === '') {
@@ -42,7 +42,6 @@ function onSearch(event) {
   clearGalleryContainer();
   fetchPictures();
   loadMoreBtn.show();
-  resetPage();
 }
 
 async function fetchPictures() {
